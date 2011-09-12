@@ -12,7 +12,7 @@ class TestFakerInternet < Test::Unit::TestCase
   end
   
   def test_russian_email
-    assert @tester.russian_email.match(/.+@.+\.\[а-яА-Я]+/)
+    assert @tester.russian_email.match(/.+@.+\.[а-яА-Я]+/)
   end
   
   def test_free_email

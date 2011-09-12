@@ -10,7 +10,13 @@ module Faker
       end
      
       def russian_email(name = nil)
-	[ russian_user_name(name), russian_domain_name ].join('@')
+        russian_email = nil
+	50.times do
+          russian_email = [ russian_user_name(name), russian_domain_name ].join('@')
+	  p russian_email
+        end  
+	
+	russian_email
       end
       
       def free_email(name = nil)

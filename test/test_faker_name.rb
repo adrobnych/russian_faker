@@ -9,11 +9,13 @@ class TestFakerName < Test::Unit::TestCase
   
   def test_name
     assert @tester.name.match(/(\w+\.? ?){2,3}/)
-    
+  end
+  
+  def test_russian_name
     russian_name = nil
+   
     50.times do
-      russian_name = @tester.russian_name
-      p russian_name
+      p russian_name = @tester.russian_name
     end
     
     assert russian_name.match(/([а-яА-Я]+\.? ?){2,3}/)

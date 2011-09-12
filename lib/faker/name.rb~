@@ -43,7 +43,7 @@ module Faker
       end
       
       def russian_female_last_name
-        %w(Иванов Петрова Янукович).rand
+        %w(Иванова Петрова Янукович).rand
       end
       
       def prefix
@@ -79,7 +79,7 @@ module Faker
     RussianFormats = [
       Proc.new { [ russian_prefix, russian_male_first_name, russian_male_last_name ] },
       Proc.new { [ russian_prefix, russian_male_first_name, russian_male_middle_name, russian_male_last_name ] },
-      Proc.new { [ russian_prefix, russian_female_first_name, russian_male_middle_name, russian_male_last_name ] },
+      Proc.new { [ russian_prefix, russian_female_first_name, russian_female_middle_name, russian_female_last_name ] },
       Proc.new { [ russian_male_first_name, russian_male_last_name, russian_suffix ] },
       Proc.new { [ russian_male_first_name, russian_male_last_name ] },
       Proc.new { [ russian_male_first_name, russian_male_middle_name, russian_male_last_name ] },

@@ -1,7 +1,5 @@
 # encoding: utf-8
 
-#require 'iconv'
-#$", "windows-1251")
 
 module Faker
   class Name
@@ -43,7 +41,7 @@ module Faker
       end
       
       def russian_female_last_name
-        %w(Иванов Петрова Янукович).rand
+        %w(Иванова Петрова Янукович).rand
       end
       
       def prefix

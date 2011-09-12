@@ -31,7 +31,7 @@ module Faker
       
       def russian_catch_phrase
         [
-          ["Золото", "777", "Монолит"].rand,
+          ["Золото", "24/7", "Монолит"].rand,
           ["Практик", "Алгоритм", "Успех"].rand
         ].join(' ')
       end
