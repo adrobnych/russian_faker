@@ -13,7 +13,7 @@ class TestFakerName < Test::Unit::TestCase
     russian_name = @tester.russian_name
     
     p "*********************************"
-    p russian_name
+    p "russian name: #{russian_name}"
     p "*********************************"
     
     assert russian_name.match(/([а-яА-Я]+\.? ?){2,3}/)
@@ -23,7 +23,20 @@ class TestFakerName < Test::Unit::TestCase
     assert @tester.prefix.match(/[A-Z][a-z]+\.?/)
   end
   
+  def test_russian_prefix
+    russian_prefix = @tester.russian_prefix
+    p "*********************************"
+    p "russian prefix: #{russian_prefix}"
+    p "*********************************"
+    
+    assert russian_prefix.match(/[А-Яа-я]+\.?/)
+  end
+  
   def test_suffix
     assert @tester.suffix.match(/[A-Z][a-z]*\.?/)
+  end
+  
+  def test_russian_suffix
+    assert @tester.russian_suffix.match(/[А-Яа-я]*\.?/)
   end
 end
