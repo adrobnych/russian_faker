@@ -29,8 +29,6 @@ class TestFakerName < Test::Unit::TestCase
     p "russian prefix: #{russian_prefix}"
     p "*********************************"
     
-    #p "вар".match(/[А-Яа-я]+\.?/)
-    
     assert russian_prefix.match(/[А-Яа-я]+\.?/)
   end
   
@@ -39,6 +37,6 @@ class TestFakerName < Test::Unit::TestCase
   end
   
   def test_russian_suffix
-    assert @tester.russian_suffix.match(/[А-Я][а-я]*\.?/)
+    assert @tester.russian_suffix.match(/[А-Яа-я]*\.?/)
   end
 end
